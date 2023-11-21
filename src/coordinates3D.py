@@ -54,4 +54,6 @@ def haversine_distance_3D(coordenada1:Coordinates3D, coordenada2:Coordinates3D)-
     :return: Distancia haversine en km, teniendo en cuenta la altitud
     :rtype: float
     '''
-    pass
+    alt_dif = (coordenada1.altitude-coordenada2.altitude)/1000
+    dist2D = haversine_distance(coordenada1, coordenada2)
+    return sqrt(alt_dif**2 + dist2D**2)
