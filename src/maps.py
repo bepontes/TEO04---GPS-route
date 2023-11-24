@@ -32,7 +32,7 @@ def add_polyline(mapa:folium.Map, puntos:List[Coordinates3D], color:str)->folium
     :return: El objeto polilínea creado
     :rtype: folium.PolyLine
     '''
-    coordenadas = [(p.coordenadas.latitude, p.coordenadas.longitude) \
+    coordenadas = [(p.latitude, p.longitude) \
                      for p in puntos]
     polilinea= folium.PolyLine(locations=coordenadas, color=color)
     polilinea.add_to(mapa)

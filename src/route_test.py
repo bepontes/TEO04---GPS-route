@@ -18,6 +18,34 @@ def main():
     test_get_distance(first_ronda, 'first part')
     test_get_distance(second_ronda, 'second part')
     
+    #EX 4
+    test_get_avg_speed(ronda, 'complete route')
+    test_get_avg_speed(first_ronda, 'first part')
+    test_get_avg_speed(second_ronda, 'second part')
+    
+    #EX 4.B
+    print(speed_hour(ronda))
+    
+    #EX 5
+    test_slope_difs(ronda, 'complete route')
+    test_slope_difs(first_ronda, 'first part')
+    test_slope_difs(second_ronda, 'second part')
+    
+    #EX 6
+    show_elevation_profile(ronda)
+    
+    #EX 8
+    show_track_map(ronda, './out/completeroute_ronda.html')
+    show_track_map(first_ronda, './out/firstpart_ronda.html')
+    show_track_map(second_ronda, './out/secondpart_ronda.html')
+    
+def test_slope_difs(list_points, name):
+    print('Positive and negative altitude differences of ', name)
+    print(get_accumulated_slope(list_points))
+
+def test_get_avg_speed(list_points, name):
+    print('Speed of the', name)
+    print(get_avg_speed(list_points))
 
 def test_get_distance(list_points, name):
     print('Distance of the', name)
